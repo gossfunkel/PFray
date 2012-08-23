@@ -1,0 +1,19 @@
+from Tkinter import *
+
+def testButton():
+    inp = text.get()
+    out.insert(END,inp)
+    text.delete(0,END)
+
+root = Tk()
+root.title("Feud")
+root.geometry("1004x700")
+frame1 = Frame(root)
+frame1.pack(fill=X)
+text = Entry(frame1)
+text.pack(side=LEFT)
+out = Listbox(frame1)
+out.pack(side=BOTTOM)
+button1 = Button(frame1, text="test", command=testButton)
+button1.pack(side=TOP)
+root.mainloop()
